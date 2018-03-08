@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "git": "git add . && git commit -m 'update to save' && git push origin master"
+    "git": "git add . && git commit -m 'update to save' && git push origin master",
+    "we7": "rm -rf meepo_hunli.zip && find ./ -name '.DS_Store' |xargs rm -rf && zip -r meepo_huli.zip meepo_hunli"
   },
   "repository": {
     "type": "git",
