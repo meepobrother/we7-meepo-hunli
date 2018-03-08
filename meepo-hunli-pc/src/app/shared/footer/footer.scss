@@ -1,0 +1,42 @@
+$iconHeight: 28px;
+$iconFontSize: 22px;
+$spanHeight: 16px;
+$spanFontSize: 12px;
+
+.footer {
+    position: fixed;
+    height: 44px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #fff;
+    box-shadow: 0px -1px 8px #ccc;
+    z-index: 9;
+    .footer-container {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        height: 100%;
+        .footer-item {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &.active {
+                color: #ec5d00;
+            }
+            i {
+                font-size: $iconFontSize;
+                margin: 0px;
+                padding: 0px;
+                line-height: $iconHeight;
+            }
+            span {
+                font-size: $spanFontSize;
+                line-height: $spanHeight;
+            }
+        }
+    }
+}

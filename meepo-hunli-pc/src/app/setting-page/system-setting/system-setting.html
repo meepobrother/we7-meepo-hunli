@@ -1,0 +1,19 @@
+<div nz-form [formGroup]="form">
+    <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+            <label for="email" nz-form-item-required>应用名字</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="title" [nzId]="'email'"></nz-input>
+            <div nz-form-explain *ngIf="getFormControl('title').dirty&&getFormControl('title').hasError('title')">The input is not valid E-mail!</div>
+        </div>
+    </div>
+    <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+            <label for="adv" nz-form-item-required>广告内容</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input formControlName="adv" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="'请输入广告内容'"></nz-input>
+        </div>
+    </div>
+</div>

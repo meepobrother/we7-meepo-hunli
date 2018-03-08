@@ -1,0 +1,10 @@
+<div style="height: 50px;"></div>
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-item" (click)="_onItem(item)" [class.active]="do === item.do" *ngFor="let item of props">
+            <i *ngIf="do != item.do" [class]="item.default.icon"></i>
+            <i *ngIf="do === item.do" [class]="item.active.icon"></i>
+            <span>{{item.title}}</span>
+        </div>
+    </div>
+</div>

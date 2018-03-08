@@ -1,0 +1,32 @@
+<nz-table #nzTable [nzDataSource]="data" [nzPageSize]="10">
+    <thead nz-thead>
+        <tr>
+            <th nz-th>
+                <span>姓名</span>
+            </th>
+            <th nz-th>
+                <span>电话</span>
+            </th>
+            <th nz-th>
+                <span>留言</span>
+            </th>
+            <th nz-th>
+                <span>操作</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody nz-tbody>
+        <tr nz-tbody-tr *ngFor="let data of nzTable.data">
+            <td nz-td>
+                <a>{{data.realname}}</a>
+            </td>
+            <td nz-td>{{data.mobile}}</td>
+            <td nz-td>{{data.content}}</td>
+            <td nz-td>
+                <span>
+                    <a href="#">删除</a>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>

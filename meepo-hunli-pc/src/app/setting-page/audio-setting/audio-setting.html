@@ -1,0 +1,14 @@
+<div class="clearfix">
+    <nz-upload nzAccept="audio/*" [nzAction]="action" (nzChange)="nzChange($event)" nzListType="text" [(nzFileList)]="_fileList" [nzShowButton]="_fileList.length < 9"
+        [nzPreview]="handlePreview">
+        <button nz-button>
+            <i class="anticon anticon-upload"></i>
+            <span>上传背景音乐</span>
+        </button>
+    </nz-upload>
+    <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+        <ng-template #modalContent>
+            <audio [src]="previewImage" controls></audio>
+        </ng-template>
+    </nz-modal>
+</div>

@@ -1,0 +1,31 @@
+<div nz-form [formGroup]="form">
+    <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+            <label for="title" nz-form-item-required>分享标题</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="title" [nzId]="'title'"></nz-input>
+            <div nz-form-explain *ngIf="getFormControl('title').dirty&&getFormControl('title').hasError('title')">The input is not valid E-mail!</div>
+        </div>
+    </div>
+    <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+            <label for="desc" nz-form-item-required>分享简介</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="desc" [nzId]="'desc'"></nz-input>
+            <div nz-form-explain *ngIf="getFormControl('desc').dirty&&getFormControl('desc').hasError('desc')">The input is not valid E-mail!</div>
+        </div>
+    </div>
+    <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+            <label for="email" nz-form-item-required>分享图标</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-upload class="avatar-uploader" [nzAction]="action" [nzShowUploadList]="false" (nzChange)="handleChange($event)">
+                <i *ngIf="!avatarUrl" class="anticon anticon-plus avatar-uploader-trigger"></i>
+                <img *ngIf="avatarUrl" [src]="avatarUrl" class="avatar">
+            </nz-upload>
+        </div>
+    </div>
+</div>

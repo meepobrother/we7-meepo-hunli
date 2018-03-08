@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{php echo $setting['title']}</title>
+    <base href="/">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="{php echo $setting['title']}">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="”keywords”" content="{php echo $setting['title']}" />
+    <meta name="”description”" content="{php echo $setting['title']}" />
+    <div style="display:none;">{php echo register_jssdk()}</div>
+    <script>window['UserInfo'] = {php echo json_encode($userinfo)}</script>
+    <link href="../addons/meepo_hunli/template/mobile/styles.8f26c4c9dd5dbd4d38b8.bundle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <app-root></app-root>
+    <script type="text/javascript" src="../addons/meepo_hunli/template/mobile/inline.709834fb2602fc683cf5.bundle.js"></script>
+    <script type="text/javascript" src="../addons/meepo_hunli/template/mobile/polyfills.c3bb05c298f88cbe4ebf.bundle.js"></script>
+    <script type="text/javascript" src="../addons/meepo_hunli/template/mobile/scripts.51ecd5c300ee152f25fa.bundle.js"></script>
+    <script type="text/javascript" src="../addons/meepo_hunli/template/mobile/main.9c6423032bf48ab53222.bundle.js"></script>
+</body>
+
+</html>

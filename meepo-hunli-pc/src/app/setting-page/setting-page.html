@@ -1,0 +1,12 @@
+<nz-tabset [nzTabPosition]="'left'">
+    <nz-tab *ngFor="let tab of tabs">
+        <ng-template #nzTabHeading>
+            {{tab.name}}
+        </ng-template>
+        <system-setting [form]="form" *ngIf="tab.content === 'system'"></system-setting>
+        <share-setting [form]="form.get('share')" *ngIf="tab.content === 'share'"></share-setting>
+        <active-setting [form]="form.get('active')" *ngIf="tab.content === 'active'"></active-setting>
+        <image-setting [form]="form.get('images')" [fileList]="imagesList" *ngIf="tab.content === 'image'"></image-setting>
+        <audio-setting [form]="form.get('audios')" [fileList]="audiosList" *ngIf="tab.content === 'audio'"></audio-setting>
+    </nz-tab>
+</nz-tabset>

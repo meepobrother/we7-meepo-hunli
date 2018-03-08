@@ -1,0 +1,9 @@
+<nz-tabset [nzTabPosition]="'top'">
+    <nz-tab *ngFor="let tab of tabs">
+        <ng-template #nzTabHeading>
+            {{tab.name}}
+        </ng-template>
+        <discuss-table *ngIf="tab.content === 'discuss'"></discuss-table>
+        <fuyue-table *ngIf="tab.content === 'fuyue'"></fuyue-table>
+    </nz-tab>
+</nz-tabset>

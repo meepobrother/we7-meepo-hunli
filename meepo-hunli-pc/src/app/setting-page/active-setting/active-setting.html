@@ -1,0 +1,29 @@
+<div nz-form [formGroup]="form">
+    <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+            <label for="address" nz-form-item-required>宴席地址</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="address" [nzId]="'address'"></nz-input>
+            <div nz-form-explain *ngIf="getFormControl('address').dirty&&getFormControl('address').hasError('address')">The input is not valid E-mail!</div>
+        </div>
+    </div>
+    <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+            <label for="mobile" nz-form-item-required>接待电话</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="mobile" [nzId]="'mobile'"></nz-input>
+            <div nz-form-explain *ngIf="getFormControl('mobile').dirty&&getFormControl('mobile').hasError('mobile')">The input is not valid E-mail!</div>
+        </div>
+    </div>
+    <div nz-form-item nz-row>
+        <div nz-form-label nz-col [nzSm]="6" [nzXs]="24">
+            <label for="time" nz-form-item-required>举行时间</label>
+        </div>
+        <div nz-form-control nz-col [nzSm]="14" [nzXs]="24" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="time" [nzId]="'time'"></nz-input>
+            <div nz-form-explain *ngIf="getFormControl('time').dirty&&getFormControl('time').hasError('time')">The input is not valid E-mail!</div>
+        </div>
+    </div>
+</div>
